@@ -2,7 +2,7 @@ package hw1;
 
 import java.util.Scanner;
 
-public class Main {
+public class Main1 {
 
     public static int choiceTasks;
 
@@ -119,7 +119,7 @@ public class Main {
                     exit();
                     break;
                 default:
-                    System.out.println("Choice must be a value between 0 and 4.");
+                    System.out.println("Choice must be a value between 0 and 3.");
 
             }
             System.out.println();
