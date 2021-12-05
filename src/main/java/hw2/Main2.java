@@ -1,30 +1,12 @@
 package hw2;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main2 {
-    public static int choiceTasks;
     public static void main(String[] args) {
         mainMenu();
-    }
-
-    public static void task1(){
-        System.out.println("Enter random words");
-        System.out.println();
-        Scanner scanner = new Scanner(System.in);
-        String randomString = scanner.next();
-        char [] stringToArray = randomString.toCharArray();
-
-        String [] words = randomString.split(" ");
-
-        for (String w : words){
-            System.out.println(w);
-        }
-    }
-
-    public static void task2() {
-
+        FindByWord findByWordMethod;
+        EncryptionGame igra;
     }
 
     public static void mainMenu () {
@@ -41,10 +23,10 @@ public class Main2 {
 
             switch (choice) {
                 case 1:
-                    task1();
+                    FindByWord.findByWordMethod();
                     break;
                 case 2:
-                    task2();
+                    EncryptionGame.igra();
                     break;
                 case 0:
                     exit();
