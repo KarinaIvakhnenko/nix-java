@@ -1,6 +1,5 @@
 package hw2;
 
-
 import java.util.Scanner;
 
 public class FindByWord {
@@ -43,9 +42,9 @@ public class FindByWord {
         System.out.print("3. ");
         boolean ifContains = false;
         for (String c : arrString) {
-                if (c.contains(keyword)) {
-                    ifContains = true;
-                    System.out.print(c + ", ");
+            if (c.contains(keyword)) {
+                ifContains = true;
+                System.out.print(c + ", ");
             }
         }
 
@@ -65,7 +64,8 @@ public class FindByWord {
     }
 
     public static void findByConsonants() {
-        System.out.print("4. ");boolean ifContains = false;
+        System.out.print("4. ");
+        boolean ifContains = false;
 
         for (String d : arrString) {
             String onlyConsonants = d.toLowerCase();

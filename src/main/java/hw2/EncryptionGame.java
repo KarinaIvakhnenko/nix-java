@@ -9,9 +9,7 @@ public class EncryptionGame {
     public static Map<Integer, String> map = new LinkedHashMap<>();
 
     public static void saveNewWords() {
-
         int yourChoice;
-
         do {
             System.out.println();
             System.out.println("Please, enter the word that you want to save:");
@@ -28,30 +26,29 @@ public class EncryptionGame {
     }
 
     public static void viewContains() {
-
         Set set = map.entrySet();
         System.out.println("Your dictionary contains: ");
 
-            if(map.isEmpty()){
-                System.out.println("Sorry, the dictionary is empty. Add some words.");
-                System.out.println();
-            }
-            for (Object element : set) {
-                Map.Entry mapEntry = (Map.Entry) element;
-                System.out.println(mapEntry.getKey() + " - " + mapEntry.getValue());
-            }
-            System.out.println("Do you want 1 - add new word, 2 - return to Main Menu?");
-            Scanner scanner = new Scanner(System.in);
-            int yourChoice = scanner.nextInt();
+        if (map.isEmpty()) {
+            System.out.println("Sorry, the dictionary is empty. Add some words.");
+            System.out.println();
+        }
+        for (Object element : set) {
+            Map.Entry mapEntry = (Map.Entry) element;
+            System.out.println(mapEntry.getKey() + " - " + mapEntry.getValue());
+        }
+        System.out.println("Do you want 1 - add new word, 2 - return to Main Menu?");
+        Scanner scanner = new Scanner(System.in);
+        int yourChoice = scanner.nextInt();
 
-            switch (yourChoice){
-                case 1:
-                    saveNewWords();
-                case 2:
-                    Main2.mainMenu();
-                default:
-                    System.out.println("Sorry, you should select between 1 and 2");
-            }
+        switch (yourChoice) {
+            case 1:
+                saveNewWords();
+            case 2:
+                Main2.mainMenu();
+            default:
+                System.out.println("Sorry, you should select between 1 and 2");
+        }
     }
 
     public static void igra() {
@@ -70,10 +67,9 @@ public class EncryptionGame {
                 saveNewWords();
             } else if (choiceFromMenu == 2) {
                 viewContains();
-            } else if (choiceFromMenu == 3){
+            } else if (choiceFromMenu == 3) {
                 Main2.mainMenu();
-            }
-            else {
+            } else {
                 System.out.println("Sorry, you should select between 1 and 3");
             }
 
